@@ -1,0 +1,20 @@
+{% extends 'base.html ' %}
+{% block content %}
+
+<h1>Write Your</h1>
+
+<form action="{% url 'create' %}" method="post" enctype="multipart/form-data">  {# enctype는 이미지 파일 받기 위한 것 #}
+    {% csrf_token %}
+    {{ form.as_p }} {# .as_p를 붙여주면 p태그로 감싸져서 좀더 예쁜 형태로 form이 나타남 #}
+{#    <table>#}
+{#        {{ form.as_table }} {# table로도 감쌀수 있다 #}
+{#    </table>#}
+
+{#    <p>제목:<input type="text" name="title"></p>#}
+{#    <p>작성자: <input type="text" name="writer"></p>#}
+{#    <p>사진: <input type="file" name = "image"></p>#}
+{#    본문: <textarea name="body" id="" cols="30" rows="10"></textarea>#}
+    <button type="submit"> submit</button>
+</form>
+
+{%  endblock %}

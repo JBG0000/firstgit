@@ -1,4 +1,4 @@
-{% extends 'base.html ' %}
+{% extends 'base.html' %}
 {% block content %}
     {% if user.is_authenticated %}  {# 인증된 상태인지 알아보는 코드 #}
     {{ user.location }}에 사는 {{ user.university }} 다니는 {{ user.nickname }}님 안녕하세요
